@@ -34,23 +34,10 @@ public class TimerScript : MonoBehaviour
 
     void countdown()
     {
-        if (timerOn)
-        {
-            if (timeLeft > 0)
-            {
-                timeLeft -= Time.deltaTime;
-                updateTimer(timeLeft);
-            }
-            else
-            {
-                Debug.Log("Time is UP!");
-                timeLeft = 0;
-                timerOn = false;
-            }
-        }
+        subtractTime(Time.deltaTime);
     }
 
-    public void subtractTime(int seconds)
+    public void subtractTime(float seconds)
     {
         if (timerOn)
         {
