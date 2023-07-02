@@ -1890,8 +1890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286e2785464492e4fa2b915a6d2ec34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftEdge: -30
-  rightEdge: 30
 --- !u!212 &509035944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30293,7 +30291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f99c7af5692a834d8ad1007445f2064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPies: 50
+  numberOfPies: 15
   pieText: {fileID: 460245924}
 --- !u!4 &2093748229
 Transform:
