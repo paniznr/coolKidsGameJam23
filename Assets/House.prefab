@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1710932607375245647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152358475144476490, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954928762881992388, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_Name
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214194503846572370, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641732415198253070, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 802491441, guid: df954723565d5d1449eed483740fb5c6, type: 3}
+    - target: {fileID: 2641732415198253070, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641732415198253070, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641732415198253070, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007987957884878505, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8007987957884878505, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+    - {fileID: 2214194503846572370, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 954928762881992388, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3711173352330741945}
+    - targetCorrespondingSourceObject: {fileID: 954928762881992388, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -762516762961467585}
+  m_SourcePrefab: {fileID: 100100000, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+--- !u!1 &1945241140137453451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 954928762881992388, guid: 7d6c6622ef114d147b7530c779258a7b, type: 3}
+  m_PrefabInstance: {fileID: 1710932607375245647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &3711173352330741945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945241140137453451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.35, y: 0.35}
+  m_EdgeRadius: 0
+--- !u!114 &-762516762961467585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945241140137453451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06011a5b802b37041a5a45a6be88f255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logic: {fileID: 0}
+  deadZone: 30
