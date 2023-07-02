@@ -31,7 +31,6 @@ public class LogicScript : MonoBehaviour
         startAnim.SetActive(true);
         player.SetActive(false);
         isGameStarted = false;
-
     }
 
     private void Update()
@@ -67,6 +66,8 @@ public class LogicScript : MonoBehaviour
         startAnim.SetActive(false);
         isGameStarted = true;
         gameStartScreen.SetActive(!isGameStarted);
+        timerTxt.gameObject.SetActive(true);
+        pieText.gameObject.SetActive(true);
     }
 
     public void restartGame()
@@ -87,7 +88,7 @@ public class LogicScript : MonoBehaviour
 
     void updateTimer(float currentTime)
     {
-
+        currentTime += 1;
         float minutes = Mathf.FloorToInt(currentTime / 60);
         if (minutes <= 0)
         {
