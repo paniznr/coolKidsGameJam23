@@ -81,6 +81,10 @@ public class LogicScript : MonoBehaviour
     public void gameOver()
     {
         isGameOver = true;
+        gameOverScreen.GetComponentInChildren<Text>().text =
+            IsGoalAchieved
+            ? "Mission Accomplished!"
+            : "Game Over";
         gameOverScreen.SetActive(isGameOver);
     }
 
