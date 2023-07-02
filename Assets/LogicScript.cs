@@ -12,10 +12,7 @@ public class LogicScript : MonoBehaviour
 
     [SerializeField] int numberOfPies;
     [SerializeField] Text pieText;
-    [SerializeField] GameObject gameOverScreen;
-    [SerializeField] GameObject gameStartScreen;
-    [SerializeField] GameObject startAnim;
-    [SerializeField] GameObject player;
+    //[SerializeField] GameObject gameOverScreen;
 
     public bool IsGameStarted => isGameStarted;
     private bool isGameStarted = false;
@@ -26,16 +23,15 @@ public class LogicScript : MonoBehaviour
 
     private void Start()
     {
-        updateTimer(timeLeft);
         printPies();
-        startAnim.SetActive(true);
-        player.SetActive(false);
-        isGameStarted = false;
+
+        // TODO: Remove this with a button check.
+        isGameStarted = true;
     }
 
     private void Update()
     {
-        timerOn = isGameStarted && !isGameOver;
+        timerOn = !isGameOver;
         countdown();
     }
 
@@ -62,37 +58,32 @@ public class LogicScript : MonoBehaviour
 
     public void startGame()
     {
-        player.SetActive(true);
-        startAnim.SetActive(false);
         isGameStarted = true;
-        gameStartScreen.SetActive(!isGameStarted);
-        timerTxt.gameObject.SetActive(true);
-        pieText.gameObject.SetActive(true);
+
+        // Load/disable scene?
     }
 
     public void restartGame()
     {
-        Debug.Log("start game runs");
-        isGameOver = false;
-        isGameStarted = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // Perhaps just call startGame()?
+
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver()
     {
         isGameOver = true;
-        gameOverScreen.GetComponentInChildren<Text>().text =
-            IsGoalAchieved
-            ? "Mission Accomplished!"
-            : "Game Over";
-        gameOverScreen.SetActive(isGameOver);
+        //gameOverScreen.SetActive(isGameOver);
     }
 
     // Timer stuff.
 
     void updateTimer(float currentTime)
     {
-        currentTime += 1;
+        if (currentTime == timeLeft)
+        {
+            currentTime += 1;
+        }
 
         float minutes = Mathf.FloorToInt(currentTime / 60);
         if (minutes <= 0)
@@ -110,7 +101,6 @@ public class LogicScript : MonoBehaviour
 
     void countdown()
     {
-        
         subtractTime(Time.deltaTime);
     }
 
