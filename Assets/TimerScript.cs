@@ -5,17 +5,21 @@ using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
+    private LogicScript logic;
+
+    public int TimeLeft => (int)timeLeft;
     [SerializeField] float timeLeft;
-    [SerializeField] bool timerOn = false;
+    [SerializeField] bool timerOn = true;
     [SerializeField] Text timerTxt;
 
     void Start()
     {
-        timerOn = true;
+        logic = GameObject.FindAnyObjectByType<LogicScript>();
     }
 
     void Update()
     {
+        timerOn = !logic.IsGameOver;
         countdown();
     }
 
@@ -51,6 +55,7 @@ public class TimerScript : MonoBehaviour
                 Debug.Log("Time is UP!");
                 timeLeft = 0;
                 timerOn = false;
+                logic.gameOver();
             }
         }
     }

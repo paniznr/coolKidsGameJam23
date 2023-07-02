@@ -6,12 +6,20 @@ using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
 {
+    private TimerScript timer;
+
     [SerializeField] int numberOfPies;
     [SerializeField] Text pieText;
     //[SerializeField] GameObject gameOverScreen;
 
+    public bool IsGameOver => isGameOver;
+    private bool isGameOver = false;
+    public bool IsGoalAchieved =>
+        timer.TimeLeft == 0 && numberOfPies == 0;
+
     private void Start()
     {
+        timer = GameObject.FindAnyObjectByType<TimerScript>();
         printPies();
     }
 
@@ -24,7 +32,16 @@ public class LogicScript : MonoBehaviour
     public void decreasePies(int pieQuantity)
     {
         numberOfPies -= pieQuantity;
-        printPies();
+        if (numberOfPies <= 0)
+        {
+            numberOfPies = 0;
+            printPies();
+            gameOver();
+        }
+        else
+        {
+            printPies();
+        }
     }
 
     public void restartGame()
@@ -34,6 +51,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
-        //gameOverScreen.SetActive(true);
+        isGameOver = true;
+        //gameOverScreen.SetActive(isGameOver);
     }
 }
