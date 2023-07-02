@@ -89,6 +89,7 @@ public class LogicScript : MonoBehaviour
     void updateTimer(float currentTime)
     {
         currentTime += 1;
+
         float minutes = Mathf.FloorToInt(currentTime / 60);
         if (minutes <= 0)
         {
