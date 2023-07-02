@@ -14,6 +14,8 @@ public class LogicScript : MonoBehaviour
     [SerializeField] Text pieText;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject gameStartScreen;
+    [SerializeField] GameObject startAnim;
+    [SerializeField] GameObject player;
 
     public bool IsGameStarted => isGameStarted;
     private bool isGameStarted = false;
@@ -25,9 +27,10 @@ public class LogicScript : MonoBehaviour
     private void Start()
     {
         printPies();
-
-        // TODO: Remove this with a button check.
+        startAnim.SetActive(true);
+        player.SetActive(false);
         isGameStarted = false;
+
     }
 
     private void Update()
@@ -59,6 +62,8 @@ public class LogicScript : MonoBehaviour
 
     public void startGame()
     {
+        player.SetActive(true);
+        startAnim.SetActive(false);
         isGameStarted = true;
         gameStartScreen.SetActive(!isGameStarted);
         // Load/disable scene?
