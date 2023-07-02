@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class HouseScript : MonoBehaviour
 {
     private LogicScript logic;
-    [SerializeField] private AudioSource collisionEffect;
 
     [SerializeField] float deadZone = 30; // On the y-axis.
 
@@ -36,7 +34,6 @@ public class HouseScript : MonoBehaviour
         //if (collision.gameObject.layer == 3)
         //{
             logic.decreasePies(1);
-            collisionEffect.Play();
         //}
     }
 }

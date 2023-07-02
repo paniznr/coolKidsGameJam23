@@ -10,8 +10,6 @@ public class ObstacleScript : MonoBehaviour
 
     [SerializeField] float deadZone = 30; // On the y-axis.
     [SerializeField] int timePenalty = 5;
-    [SerializeField] private AudioSource  collisionEffect;
-
 
     // Awake is called when the script instance is being loaded.
     private void Awake()
@@ -43,7 +41,6 @@ public class ObstacleScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         logic.subtractTime(timePenalty);
-        collisionEffect.Play();
         // TODO: Add Music: MG
     }
 }
