@@ -26,6 +26,7 @@ public class LogicScript : MonoBehaviour
 
     private void Start()
     {
+        updateTimer(timeLeft);
         printPies();
         startAnim.SetActive(true);
         player.SetActive(false);
@@ -66,31 +67,19 @@ public class LogicScript : MonoBehaviour
         startAnim.SetActive(false);
         isGameStarted = true;
         gameStartScreen.SetActive(!isGameStarted);
-        // Load/disable scene?
-        // ??
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
-
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void restartGame()
     {
-        // Perhaps just call startGame()?
-        // ??
         Debug.Log("start game runs");
         isGameOver = false;
         isGameStarted = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //startGame();
-        // ???
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver()
     {
         isGameOver = true;
-
-        // TODO: Edit as needed.
         gameOverScreen.SetActive(isGameOver);
     }
 
@@ -98,10 +87,6 @@ public class LogicScript : MonoBehaviour
 
     void updateTimer(float currentTime)
     {
-        if (currentTime == timeLeft)
-        {
-            currentTime += 1;
-        }
 
         float minutes = Mathf.FloorToInt(currentTime / 60);
         if (minutes <= 0)
