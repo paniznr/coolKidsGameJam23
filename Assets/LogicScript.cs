@@ -86,7 +86,15 @@ public class LogicScript : MonoBehaviour
         }
 
         float minutes = Mathf.FloorToInt(currentTime / 60);
+        if (minutes <= 0)
+        {
+            minutes = 0;
+        }
         float seconds = Mathf.FloorToInt(currentTime % 60);
+        if (seconds <= 0)
+        {
+            seconds = 0;
+        }
 
         timerTxt.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
     }
