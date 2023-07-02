@@ -1724,60 +1724,13 @@ RectTransform:
   - {fileID: 460245923}
   - {fileID: 1607721792}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &345227637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 345227639}
-  - component: {fileID: 345227638}
-  m_Layer: 0
-  m_Name: Timer
-  m_TagString: Logic
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &345227638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345227637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde471f5808e24b4cae51e6b38942a10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 120
-  timerOn: 1
-  timerTxt: {fileID: 1607721793}
---- !u!4 &345227639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345227637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 414.36646, y: 203.44809, z: -1.9211338}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460245922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,7 +1908,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &509035946
 Rigidbody2D:
@@ -29897,7 +29850,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1433953844
 MonoBehaviour:
@@ -30077,7 +30030,7 @@ Transform:
   m_Children:
   - {fileID: 109808307}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937138091
 GameObject:
@@ -30125,7 +30078,7 @@ Transform:
   - {fileID: 932591763}
   - {fileID: 1303954157}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2034932267
 GameObject:
@@ -30291,6 +30244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f99c7af5692a834d8ad1007445f2064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLeft: 120
+  timerOn: 1
+  timerTxt: {fileID: 1607721793}
   numberOfPies: 15
   pieText: {fileID: 460245924}
 --- !u!4 &2093748229
@@ -30306,5 +30262,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

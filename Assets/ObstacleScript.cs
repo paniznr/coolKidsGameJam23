@@ -7,7 +7,6 @@ public class ObstacleScript : MonoBehaviour
 {
     private LogicScript logic;
     private PlayerScript player;
-    private TimerScript timer;
 
     [SerializeField] float deadZone = 30; // On the y-axis.
     [SerializeField] int timePenalty = 5;
@@ -16,7 +15,6 @@ public class ObstacleScript : MonoBehaviour
     private void Awake()
     {
         logic = GameObject.FindAnyObjectByType<LogicScript>();
-        timer = GameObject.FindAnyObjectByType<TimerScript>();
         player = GameObject.FindAnyObjectByType<PlayerScript>();
     }
 
@@ -42,7 +40,7 @@ public class ObstacleScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        timer.subtractTime(timePenalty);
+        logic.subtractTime(timePenalty);
         // TODO: Add Music: MG
     }
 }
