@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    private LogicScript logic;
     private Rigidbody2D playerRigidbody;
 
     private float leftEdge, rightEdge; // Taken from background spawner.
@@ -11,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindAnyObjectByType<LogicScript>();
         playerRigidbody = GetComponent<Rigidbody2D>();
 
         var spawner = GameObject.FindAnyObjectByType<BackgroundSpawnerScript>();
@@ -21,6 +23,10 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!logic.IsGameStarted || logic.IsGameOver) {
+            playerRigidbody.velocity = Vector2.zero;
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             playerRigidbody.velocity = Vector2.left * 5;
@@ -42,7 +48,6 @@ public class PlayerScript : MonoBehaviour
         {
             playerRigidbody.velocity = Vector2.left;
         }
-
     }
 
     public Vector3 getPosition()

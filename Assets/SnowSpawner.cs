@@ -6,6 +6,8 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class SnowSpawner : MonoBehaviour
 {
+    private LogicScript logic;
+
     [SerializeField] float snowSpawnTimer = 8f;
     [SerializeField] float timer = 0f;
     [SerializeField] GameObject tilemap;
@@ -15,12 +17,17 @@ public class SnowSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindAnyObjectByType<LogicScript>();
         Instantiate(tilemap, transform.position, transform.rotation, transform);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!logic.IsGameStarted || logic.IsGameOver)
+        {
+            return;
+        }
         if (timer > snowSpawnTimer)
         {
             //Spawn

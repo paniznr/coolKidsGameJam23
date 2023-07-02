@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ObstacleScript : MonoBehaviour
 {
+    private LogicScript logic;
     private PlayerScript player;
     private TimerScript timer;
 
@@ -14,9 +15,9 @@ public class ObstacleScript : MonoBehaviour
     // Awake is called when the script instance is being loaded.
     private void Awake()
     {
+        logic = GameObject.FindAnyObjectByType<LogicScript>();
         timer = GameObject.FindAnyObjectByType<TimerScript>();
         player = GameObject.FindAnyObjectByType<PlayerScript>();
-
     }
 
     // Start is called before the first frame update
@@ -28,6 +29,10 @@ public class ObstacleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!logic.IsGameStarted || logic.IsGameOver)
+        {
+            return;
+        }
         var currentDeadZone = player.getPosition().y + deadZone;
         if (transform.position.y > currentDeadZone)
         {

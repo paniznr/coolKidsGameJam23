@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class BackgroundSpawnerScript : MonoBehaviour
 {
+    private LogicScript logic;
+
     [SerializeField] GameObject player;
     [SerializeField] RaycastHit2D spawnChecker;
     [SerializeField] float spawnCheckRadius = 5f;
@@ -26,12 +28,16 @@ public class BackgroundSpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        logic = GameObject.FindAnyObjectByType<LogicScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!logic.IsGameStarted || logic.IsGameOver)
+        {
+            return;
+        }
         var randomPicker = Random.Range(1, 11);
         var randomPickerNonCollidables = Random.Range(1, 11);
         // in the collidables array, the bear is always index 0, tree is index 1
