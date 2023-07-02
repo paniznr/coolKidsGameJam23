@@ -8,20 +8,17 @@ using UnityEngine;
 
 public class BackgroundSpawnerScript : MonoBehaviour
 {
-    public GameObject player;
-    RaycastHit2D spawnChecker;
-    public float spawnCheckRadius = 5f;
-    public Transform tilemap;
-    public int spawnHeightOffset = 30;
-    public float spawnRate = 2; // One spawn every 2 seconds
-    public float offset = 10;
+    [SerializeField] GameObject player;
+    [SerializeField] RaycastHit2D spawnChecker;
+    [SerializeField] float spawnCheckRadius = 5f;
+    [SerializeField] Transform tilemap;
+    [SerializeField] int spawnHeightOffset = 30;
+    [SerializeField] float spawnRate = 2; // One spawn every 2 seconds
     private float timer = 0;
 
-    public float leftEdge, rightEdge;
-
-    public GameObject leftFence, rightFence;
-
-    public GameObject[] collidables, nonCollidables;
+    [SerializeField] float leftEdge, rightEdge;
+    [SerializeField] GameObject leftFence, rightFence;
+    [SerializeField] GameObject[] collidables, nonCollidables;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +40,6 @@ public class BackgroundSpawnerScript : MonoBehaviour
 
         if (timer < spawnRate)
         {
-            if(timer > 0.5 * spawnRate)
-            {
-                spawnFences();
-            }
             timer += Time.deltaTime;
         }
         else
@@ -92,7 +85,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
 
     void spawnHouse()
     {
-        var randomHouse = nonCollidables[Random.Range(0,3)];
+        var randomHouse = nonCollidables[Random.Range(0, nonCollidables.Length)];
         spawnObject(randomHouse);
     }
 

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
-    public float TimeLeft;
-    public bool TimerOn = false;
-    public Text TimerTxt;
+    [SerializeField] float timeLeft;
+    [SerializeField] bool timerOn = false;
+    [SerializeField] Text timerTxt;
 
     void Start()
     {
-        TimerOn = true;
+        timerOn = true;
     }
 
     void Update()
@@ -21,48 +21,49 @@ public class TimerScript : MonoBehaviour
 
     void updateTimer(float currentTime)
     {
-        if (currentTime == TimeLeft) { 
+        if (currentTime == timeLeft)
+        {
             currentTime += 1;
         }
 
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        TimerTxt.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
+        timerTxt.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
     }
-    
+
     void countdown()
     {
-        if (TimerOn)
+        if (timerOn)
         {
-            if (TimeLeft > 0)
+            if (timeLeft > 0)
             {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
+                timeLeft -= Time.deltaTime;
+                updateTimer(timeLeft);
             }
             else
             {
                 Debug.Log("Time is UP!");
-                TimeLeft = 0;
-                TimerOn = false;
+                timeLeft = 0;
+                timerOn = false;
             }
         }
     }
 
     public void subtractTime(int seconds)
     {
-        if (TimerOn)
+        if (timerOn)
         {
-            if (TimeLeft > 0)
+            if (timeLeft > 0)
             {
-                TimeLeft -= seconds;
-                updateTimer(TimeLeft);
+                timeLeft -= seconds;
+                updateTimer(timeLeft);
             }
             else
             {
                 Debug.Log("Time is UP!");
-                TimeLeft = 0;
-                TimerOn = false;
+                timeLeft = 0;
+                timerOn = false;
             }
         }
     }

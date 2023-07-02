@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HouseScript : MonoBehaviour
 {
-    public LogicScript logic;
-    public float deadZone = 30; // On the y-axis.
+    [SerializeField] LogicScript logic;
+    [SerializeField] float deadZone = 30; // On the y-axis.
 
     // Awake is called when the script instance is being loaded.
     private void Awake()

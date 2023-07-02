@@ -1760,9 +1760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde471f5808e24b4cae51e6b38942a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 120
-  TimerOn: 1
-  TimerTxt: {fileID: 1607721793}
+  timeLeft: 120
+  timerOn: 1
+  timerTxt: {fileID: 1607721793}
 --- !u!4 &345227639
 Transform:
   m_ObjectHideFlags: 0
@@ -1890,8 +1890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286e2785464492e4fa2b915a6d2ec34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerForce: 100
-  rigidbody: {fileID: 509035946}
   leftEdge: -30
   rightEdge: 30
 --- !u!212 &509035944
@@ -29919,8 +29917,7 @@ MonoBehaviour:
   spawnCheckRadius: 5
   tilemap: {fileID: 2034932268}
   spawnHeightOffset: 30
-  spawnRate: 0.62
-  offset: 10
+  spawnRate: 0.5
   leftEdge: -30
   rightEdge: 30
   leftFence: {fileID: 5628497281683784230, guid: 0ad4bd4d08b4cec4dbab94d1c5253e2f, type: 3}
@@ -30298,9 +30295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfPies: 50
   pieText: {fileID: 460245924}
-  timeLeft: 0
-  timerOn: 0
-  timerText: {fileID: 0}
 --- !u!4 &2093748229
 Transform:
   m_ObjectHideFlags: 0

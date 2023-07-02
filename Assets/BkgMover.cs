@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BackgroundMover : MonoBehaviour
 {
-    public float moveSpeed = 5;
-    public float deadZone = 50f;
+    [SerializeField] float moveSpeed = 5;
+    [SerializeField] float deadZone = 50f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,8 @@ public class BackgroundMover : MonoBehaviour
         transform.position = transform.position + (Vector3.up * moveSpeed) * Time.deltaTime;
         if (transform.position.y > deadZone)
         {
-            if (transform.tag != "DoNotDelete") {
+            if (transform.tag != "DoNotDelete")
+            {
                 Destroy(gameObject);
             }
         }

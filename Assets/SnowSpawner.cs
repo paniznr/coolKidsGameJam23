@@ -6,11 +6,11 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class SnowSpawner : MonoBehaviour
 {
-    public float snowSpawnTimer = 8f;
-    public float timer = 0f;
-    public GameObject tilemap;
-    public GameObject player;
-    public int spawnHeightOffset = 30;
+    [SerializeField] float snowSpawnTimer = 8f;
+    [SerializeField] float timer = 0f;
+    [SerializeField] GameObject tilemap;
+    [SerializeField] GameObject player;
+    [SerializeField] int spawnHeightOffset = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,8 @@ public class SnowSpawner : MonoBehaviour
             Instantiate(tilemap, transform.position, transform.rotation, transform);
             timer = 0f;
         }
-        else {
+        else
+        {
             timer += Time.deltaTime;
         }
         var currentSpawnPosition = player.transform.position.y - spawnHeightOffset;
@@ -37,5 +38,5 @@ public class SnowSpawner : MonoBehaviour
             transform.position.z
         );
     }
-    
+
 }

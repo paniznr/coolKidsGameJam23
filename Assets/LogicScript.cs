@@ -6,13 +6,9 @@ using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
 {
-    public int numberOfPies = 50;
-    public Text pieText;
-    public float timeLeft;
-    public bool timerOn = false;
-
-    public Text timerText;
-    //public GameObject gameOverScreen;
+    [SerializeField] int numberOfPies;
+    [SerializeField] Text pieText;
+    //[SerializeField] GameObject gameOverScreen;
 
     private void Start()
     {

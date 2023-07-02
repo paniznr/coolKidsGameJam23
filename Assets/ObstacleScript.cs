@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class ObstacleScript : MonoBehaviour
 {
-    public PlayerScript player;
-    public TimerScript timer;
-    public float deadZone = 30; // On the y-axis.
-    public int timePenalty = 5;
+    private PlayerScript player;
+    private TimerScript timer;
+
+    [SerializeField] float deadZone = 30; // On the y-axis.
+    [SerializeField] int timePenalty = 5;
 
     // Awake is called when the script instance is being loaded.
     private void Awake()
