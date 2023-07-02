@@ -16,6 +16,9 @@ public class BackgroundSpawnerScript : MonoBehaviour
     [SerializeField] float spawnRate = 2; // One spawn every 2 seconds
     private float timer = 0;
 
+    // Getters
+    public float LeftEdge => leftEdge;
+    public float RightEdge => rightEdge;
     [SerializeField] float leftEdge, rightEdge;
     [SerializeField] GameObject leftFence, rightFence;
     [SerializeField] GameObject[] collidables, nonCollidables;

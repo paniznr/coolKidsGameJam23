@@ -6,12 +6,16 @@ public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
 
-    [SerializeField] float leftEdge, rightEdge;
+    private float leftEdge, rightEdge; // Taken from background spawner.
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+
+        var spawner = GameObject.FindAnyObjectByType<BackgroundSpawnerScript>();
+        leftEdge = spawner.LeftEdge;
+        rightEdge = spawner.RightEdge;
     }
 
     // Update is called once per frame
