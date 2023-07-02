@@ -12,7 +12,8 @@ public class LogicScript : MonoBehaviour
 
     [SerializeField] int numberOfPies;
     [SerializeField] Text pieText;
-    //[SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject gameStartScreen;
 
     public bool IsGameStarted => isGameStarted;
     private bool isGameStarted = false;
@@ -26,12 +27,12 @@ public class LogicScript : MonoBehaviour
         printPies();
 
         // TODO: Remove this with a button check.
-        isGameStarted = true;
+        isGameStarted = false;
     }
 
     private void Update()
     {
-        timerOn = !isGameOver;
+        timerOn = isGameStarted && !isGameOver;
         countdown();
     }
 
@@ -59,21 +60,33 @@ public class LogicScript : MonoBehaviour
     public void startGame()
     {
         isGameStarted = true;
-
+        gameStartScreen.SetActive(!isGameStarted);
         // Load/disable scene?
+        // ??
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void restartGame()
     {
         // Perhaps just call startGame()?
-
+        // ??
+        Debug.Log("start game runs");
+        isGameOver = false;
+        isGameStarted = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //startGame();
+        // ???
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver()
     {
         isGameOver = true;
-        //gameOverScreen.SetActive(isGameOver);
+
+        // TODO: Edit as needed.
+        gameOverScreen.SetActive(isGameOver);
     }
 
     // Timer stuff.
@@ -101,6 +114,7 @@ public class LogicScript : MonoBehaviour
 
     void countdown()
     {
+        
         subtractTime(Time.deltaTime);
     }
 
